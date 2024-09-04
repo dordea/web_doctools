@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{%block title%}
+Congrulations !
+{% endblock %}
+{%block content%}
+<div class="container text-center"style="height: 70vh">
+<h1 class="display-5 fst-italic fw-normal text-center" style="font-family: Georgia;color:#1e7b85">Thank you for your email confirmation. Now you can <a class="mac-lin" href="{% url 'login' %}">login</a> your account.</h1><br>
+
+</div>
+{% endblock %}

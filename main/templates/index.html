@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Welcome to DocsTool
+{% endblock %}
+
+{%block content%}
+<h1 class="display-4 fw-normal text-success text-center">Welcome</h1>
+<p class="fs-5 text-muted" style="font-family: Georgia;color:#1e7b85">DocsTool is a program created especially for students, for convenience and time saving !</p>
+<p class="fs-5" style="font-family: Georgia;color:#1e7b85">A small project of a student that can make your life a little easier !</p>
+{% load static %}
+<img class="img-fluid rounded mx-auto d-block" width="555px" height="380px" src="{% static 'imgs/robot.png' %}">
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:#1e7b85"><br>
+
+<h1 class="display-5 fst-italic fw-normal text-center" style="font-family: Georgia;color:#1e7b85">Screenshots: </h1><br>
+<div class="text-center">
+<img class="img-fluid" width="555px" height="380px" src="{% static 'imgs/img.png' %}">
+    <br><br><hr style="height:3px;border-width:0;color:gray;background-color:#1e7b85;width:70%;margin: auto"><br>
+<img class="img-fluid" width="555px" height="380px" src="{% static 'imgs/img_1.png' %}">
+      <br><br><hr style="height:3px;border-width:0;color:gray;background-color:#1e7b85;width:70%;margin: auto"><br>
+<img class="img-fluid" width="555px" height="380px" src="{% static 'imgs/img_2.png' %}"><br><br>
+
+</div>
+{% endblock %}

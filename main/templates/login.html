@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{%block title%}
+Login
+{% endblock %}
+{%block content%}
+<div class="container text-center"style="height: 70.5vh">
+<h1 class="display-5 fst-italic fw-normal text-center" style="font-family: Georgia;color:#1e7b85">Login</h1><br>
+<div class="mb-3">
+<form method="POST" class="fs-5 fst-italic text-muted">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" class="dwn" value="Login">
+</form>
+</div>
+<p class="fs-5 fst-italic text-muted text-center">Don't have an account ? <a class="mac-lin" href="{% url 'signup' %}">Register</a></p>
+</div>
+{% endblock %}

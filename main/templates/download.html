@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{%block title%}
+Downloads
+{% endblock %}
+
+{%block content%}
+<div class="container " style="height: 70.5vh">
+<h4 class="display-6 fs-2 fw-normal text-left">Download the latest version for Windows</h4><br>
+<a  class="dwn" href="{{last.upload.url}}">{{last.title}}</a><br><br>
+<p class="fs-5 fst-italic text-muted text-left">Looking for DocsTool with a different OS ? DocsTool for <a class="mac-lin" href="{{mac.upload.url}}">MacOS</a> , <a class="mac-lin" href="{{lin.upload.url}}">Linux</a></p>
+<hr style="height:2px;border-width:0;color:gray;background-color:#1e7b85"><br>
+<p class="fs-2 fst-italic text-muted text-center">All versions of DocsTool :<br>
+  <hr style="height:1px;border-width:0;color:gray;background-color:#1e7b85;width:70%;margin: auto"><br>
+  {% for i in context %}
+    <p class="fs-5 fst-italic text-muted text-left">Title: {{i.title}}</p>
+    <p class="fs-5 fst-italic text-muted text-left">Download the file from here <a class="mac-lin" href="{{i.upload.url}}" download>{{i.title}}</a></p>
+    <hr style="height:2px;border-width:0;color:gray;background-color:#1e7b85"><br>
+    {% endfor %}
+<br><br></div>
+{% endblock %}

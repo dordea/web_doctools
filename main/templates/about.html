@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}
+About US
+{% endblock %}
+
+{%block content%}
+<div class="container" style="height:70.5vh">
+<h1 class="display-3 fst-italic fw-normal text-center" style="font-family: Georgia;color:#1e7b85">About US</h1>
+<p class="fs-3 fst-italic text-muted text-center" style="border-radius:8px;border-style: solid;border-width: 1px;border-color:#1e7b85;" >Our software will make document creation a pleasure.<br>
+    Now with just one click you can create a thesis model !<br>
+    We insisted on creating an application that was as comfortable and compact as possible !<br>
+    We take care of your time !<br>
+    We allow to download from scribd with just one click !<br>
+    We can convert your pdf file to docx, and vice versa !<br>
+    For all functions you pay only 0 dollars for lifetime !<br>
+    Don't miss the moment.<br>
+    Save time !</p><br>
+<p class="fs-3 fw-bolder text-center" style="color:#1e7b85">Our software is Open-Source !!!</p>
+{%if request.user.is_authenticated %}
+<div class="text-center">
+<img src="{% static 'imgs/github.png' %}" width="24px" height="24px">
+<a class="gith" target="_blank" href="https://github.com/crazynews/DocTools">Github Repository</a>
+</div>
+{% else %}
+<p class="fs-5 fst-italic text-muted text-center"><a class="mac-lin" href="{% url 'login' %}">Login</a> for view github link !</p>
+{% endif %}
+</div>
+{% endblock %}

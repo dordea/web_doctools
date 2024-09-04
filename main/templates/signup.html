@@ -1,0 +1,28 @@
+    {% extends 'base.html' %}
+{%block title%}
+Register
+{% endblock %}
+    {% block content %}
+<div class="container text-center"style="height: 100%">
+<h1 class="display-5 fst-italic fw-normal text-center" style="font-family: Georgia;color:#1e7b85">Register</h1><br>
+<div class="mb-3">
+<form method="POST" class="fs-5 fst-italic text-muted">
+        {% csrf_token %}
+          {% for field in form %}
+          <p>
+            {{ field.label_tag }}<br>
+            {{ field }}
+            {% if field.help_text %}
+              <p style="display: none ">{{ field.help_text }}</p>
+            {% endif %}
+            {% for error in field.errors %}
+              <p style="color: red">{{ error }}</p>
+            {% endfor %}
+          </p>
+          {% endfor %}
+            <input type="submit" class="dwn" value="Register">
+      </form>
+  </div>
+  <p class="fs-5 fst-italic text-muted text-center">Already have an account ? <a class="mac-lin" href="{% url 'login' %}">Login</a></p>
+    </div>
+    {% endblock %}

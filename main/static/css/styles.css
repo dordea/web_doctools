@@ -1,0 +1,68 @@
+   body {
+  background-image: linear-gradient(180deg, #eee, #fff 100px, #fff);
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+
+    .dwn {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  font-family: Georgia;
+  color: #ffffff;
+  font-size: 21px;
+  background: #1e7b85;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.dwn:hover {
+  background: #146870;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+ .mac-lin {
+ color: #1e7b85;font-weight: bold;text-decoration: none;
+ padding: 1px;
+ margin: 1px;
+}
+ .mac-lin:hover {
+ color: #146870;font-weight: bold;text-decoration: none;cursor: pointer; padding: 1px; margin: 1px;
+}
+
+ hr.style-seven {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+ #soft-status-indicator {
+    border-radius: 99px;
+    display: inline-block;
+    height: 12px;
+    width: 12px;
+     cursor: pointer;
+}
+ .soft-status-indicator-none {
+    background-color: /*#FF8C00*/ #008000;
+}
+  .gith {
+    color: #0d1117;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+}
+  .gith:hover{
+      color:#1e7b85;
+  }
